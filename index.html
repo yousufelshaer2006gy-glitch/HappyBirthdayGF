@@ -11,28 +11,38 @@
 <body>
     <div class="cursor"></div>
     <div class="container">
-        <h1>Happy Birthday Priya💗</h1>
+        <h1>Happy Birthday saloma💗</h1>
         <div class="greeting"></div>
         <button class="cta-button">Click to Enter Our World 💕</button>
     </div>
 
-    <script>
+  <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // تحديد الزرار البينك بأي طريقة ممكنة في صفحتك
-    const enterBtn = document.querySelector('.click-to-enter-btn')  document.querySelector('button')  document.querySelector('.btn') || document.querySelector('a');
+    // حددنا الزرار بالاسم المكتوب في سطر 16 بالظبط
+    const enterBtn = document.querySelector('.cta-button');
     const audio = document.getElementById('bg-music');
 
     if (enterBtn) {
-      enterBtn.addEventListener('click', function() {
+      enterBtn.addEventListener('click', function(e) {
+        // منع الانتقال اللحظي عشان الأغنية تلحق تبدأ اشتغال
+        e.preventDefault(); 
+        
         if (audio) {
-          audio.play().catch(function(err) {
+          audio.play().then(function() {
+            // أول ما الأغنية تشتغل، ينقله لصفحة الذكريات
+            window.location.href = "last.html"; 
+          }).catch(function(err) {
             console.log("Playback error:", err);
+            // لو حصل أي بروتوكول منع، ينقله برضه عشان الموقع ميعلقش
+            window.location.href = "last.html";
           });
+        } else {
+          window.location.href = "last.html";
         }
       });
     }
   });
-</script>
+</script>  
         
 </body>
 </html>
