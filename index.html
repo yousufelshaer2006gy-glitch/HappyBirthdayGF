@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <link rel="cause.css" href="style.css">
+    <link rel="stylesheet" href="cause.css">
     <audio id="bg-music" src="02_Meaddy_El_Nas.mp3" loop></audio>
 </head>
 <body>
@@ -18,22 +18,22 @@
 
   <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // حددنا الزرار بالاسم المكتوب في سطر 16 بالظبط
+    // تحديد الزرار البينك من خلال الكلاس المكتوب في سطر 16
     const enterBtn = document.querySelector('.cta-button');
     const audio = document.getElementById('bg-music');
 
     if (enterBtn) {
       enterBtn.addEventListener('click', function(e) {
-        // منع الانتقال اللحظي عشان الأغنية تلحق تبدأ اشتغال
+        // منع أي انتقال تلقائي مفاجئ قبل ما الأغنية تشتغل
         e.preventDefault(); 
         
         if (audio) {
           audio.play().then(function() {
-            // أول ما الأغنية تشتغل، ينقله لصفحة الذكريات
+            // أول ما الأغنية تبدأ تشتغل بنجاح ينقله لصفحة الصور
             window.location.href = "last.html"; 
           }).catch(function(err) {
             console.log("Playback error:", err);
-            // لو حصل أي بروتوكول منع، ينقله برضه عشان الموقع ميعلقش
+            // لو المتصفح عمل حماية برضه ينقله وميعلقش الموقع
             window.location.href = "last.html";
           });
         } else {
@@ -42,7 +42,7 @@
       });
     }
   });
-</script>  
+</script> 
         
 </body>
 </html>
