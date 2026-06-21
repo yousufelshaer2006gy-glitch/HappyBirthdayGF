@@ -6,7 +6,7 @@
     <title>Happy Birthday</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    
+    <audio id="bg-music" src="02_Meaddy_El_Nas.mp3" loop></audio>
 </head>
 <body>
     <div class="cursor"></div>
@@ -16,8 +16,18 @@
         <button class="cta-button">Click to Enter Our World 💕</button>
     </div>
 
-    <script src="script.js">
+    <script>
+  // اربط الزرار بالصوت
+  const enterBtn = document.querySelector('.click-to-enter-btn')  document.querySelector('button')  document.querySelector('a'); 
+  const audio = document.getElementById('bg-music');
+
+  if (enterBtn) {
+    enterBtn.addEventListener('click', function(e) {
+      // تشغيل الأغنية فوراً عند الضغط
+      audio.play().catch(err => console.log("Playback error:", err));
+    });
+  }
+</script>
         
-    </script>
 </body>
 </html>
