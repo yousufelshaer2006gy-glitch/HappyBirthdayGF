@@ -404,29 +404,34 @@
         <p>You deserve all the joy in the world—keep shining and spreading your beautiful energy.✨</p>
         <a href="#" class="goodbye-btn">Until We Meet Again 💝</a>
     </section>
-</body>
-<!-- كود الأغنية -->
+<!-- كود الأغنية والزرار تحت الكلام العربي بالظبط -->
 <audio id="bg-music" src="02_Meaddy_El_Nas.mp3" loop></audio>
-<div style="text-align: center; margin-top: 20px; position: relative; z-index: 1000;">
-    <button id="music-btn" style="background: #ff4757; color: white; border: none; padding: 12px 25px; border-radius: 50px; cursor: pointer; font-family: sans-serif; font-size: 16px; box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4); font-weight: bold; animation: pulse 2s infinite;">🎵 اضغطي هنا لتشغيل الأغنية 🎵</button>
+
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+    <button id="music-btn" style="background: #ff4757; color: white; border: none; padding: 12px 25px; border-radius: 50px; cursor: pointer; font-family: sans-serif; font-size: 16px; box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4); font-weight: bold;">🎵 تشغيل الموسيقى 🎵</button>
 </div>
 
-  <script>
-  const audio = document.getElementById('bg-music');
-  const btn = document.getElementById('music-btn');
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const audio = document.getElementById('bg-music');
+    const btn = document.getElementById('music-btn');
 
-  btn.addEventListener('click', function() {
-    if (audio.paused) {
-      audio.play().then(() => {
-        btn.innerText = '🔇 كتم الصوت';
-        btn.style.background = '#ccc';
-      }).catch(err => console.log(err));
-    } else {
-      audio.pause();
-      btn.innerText = '🎵 تشغيل الموسيقى';
-      btn.style.background = '#ff4757';
+    if (btn && audio) {
+      btn.addEventListener('click', function() {
+        if (audio.paused) {
+          audio.play().then(function() {
+            btn.innerText = '🔇 كتم الصوت';
+          }).catch(function(err) {
+            console.log("Playback error:", err);
+          });
+        } else {
+          audio.pause();
+          btn.innerText = '🎵 تشغيل الموسيقى 🎵';
+        }
+      });
     }
   });
-</script>    
-    
+</script>
+
+</body>
 </html>
