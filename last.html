@@ -407,7 +407,9 @@
 </body>
 <!-- كود الأغنية -->
 <audio id="bg-music" src="02_Meaddy_El_Nas.mp3" loop></audio>
-<button id="music-btn" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: #ff4757; color: white; border: none; padding: 10px 15px; border-radius: 50px; cursor: pointer; font-family: sans-serif; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">🎵 تشغيل الموسيقى</button>
+<div style="text-align: center; margin-top: 20px; position: relative; z-index: 1000;">
+    <button id="music-btn" style="background: #ff4757; color: white; border: none; padding: 12px 25px; border-radius: 50px; cursor: pointer; font-family: sans-serif; font-size: 16px; box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4); font-weight: bold; animation: pulse 2s infinite;">🎵 اضغطي هنا لتشغيل الأغنية 🎵</button>
+</div>
 
   <script>
   const audio = document.getElementById('bg-music');
