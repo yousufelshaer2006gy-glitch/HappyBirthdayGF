@@ -406,14 +406,25 @@
     </section>
 </body>
 <!-- كود الأغنية -->
-<audio id="bg-music" src="esm3.com.274676.mp3⁠" loop></audio>
+<audio id="bg-music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" loop></audio>
+<button id="music-btn" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: #ff4757; color: white; border: none; padding: 10px 15px; border-radius: 50px; cursor: pointer; font-family: sans-serif; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">🎵 تشغيل الموسيقى</button>
 
-<script>
-  document.addEventListener('click', function() {
-    var audio = document.getElementById('bg-music');
-    audio.play().catch(function(error) {
-      console.log("Playback error:", error);
-    });
-  }, { once: true });
-</script>
+  <script>
+  const audio = document.getElementById('bg-music');
+  const btn = document.getElementById('music-btn');
+
+  btn.addEventListener('click', function() {
+    if (audio.paused) {
+      audio.play().then(() => {
+        btn.innerText = '🔇 كتم الصوت';
+        btn.style.background = '#ccc';
+      }).catch(err => console.log(err));
+    } else {
+      audio.pause();
+      btn.innerText = '🎵 تشغيل الموسيقى';
+      btn.style.background = '#ff4757';
+    }
+  });
+</script>    
+    
 </html>
