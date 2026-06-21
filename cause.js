@@ -1,22 +1,22 @@
  // Reasons database
  const reasons = [
     { 
-        text: "You’re such a kind and wonderful person, and I feel lucky to share such a good bond with you. 💖", 
+        text: "اول حاجه كل سنه وانتي طيبه ي احلي سوسو في الدنيا وربنا يخليكي ليا ي حبيبتي ي قمر انتي . 💖", 
         emoji: "🌟",
         gif: "gif1.gif"
     },
     { 
-        text: "May your day be filled with love, laughter, and endless joy. 🌸 ", 
+        text: "ربنا يجعله عام سعيد عليكي ويفرحك دايما وتحققي كل اللي بتتمنيه ان شاء الله. 🌸 ", 
         emoji: "💗",
         gif: "gif2.gif"
     },
     { 
-        text: "Wishing you success, happiness, and everything your heart desires. ✨ ", 
+        text: " مفيش كلام يوصف حنيتك والله ي ابله سلمي وجمالك وان شاء الله نبقي مع بعض وسوا طول العمر وبحب وجودك في يومي. ✨ ", 
         emoji: "💕",
         gif: "gif1.gif"
     },
     { 
-        text: "Stay the amazing girl you are—always spreading positivity around. Have the happiest year ahead! 🥳 ", 
+        text: "وانا بحبك ي سوسو ممكن مش بعرف اعبر بكلامي بس انا والله بحبك وبعد اقولك اللي هو علي الرغي بتاعك ده انا فعلا مش بحب الكلام الكتير بس والله اما تعدي ساكته ومتتكلميش بيبقي في حاجه ناقصه كده فانتي ترغي عشان مزعلكيش! 🥳 ", 
         emoji: "🌟",
         gif: "gif2.gif"
     }
