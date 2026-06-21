@@ -405,5 +405,15 @@
         <a href="#" class="goodbye-btn">Until We Meet Again 💝</a>
     </section>
 </body>
+<!-- كود الأغنية -->
+<audio id="bg-music" src="رابط_الأغنية_هنا" loop></audio>
 
+<script>
+  document.addEventListener('click', function() {
+    var audio = document.getElementById('bg-music');
+    audio.play().catch(function(error) {
+      console.log("Playback error:", error);
+    });
+  }, { once: true });
+</script>
 </html>
