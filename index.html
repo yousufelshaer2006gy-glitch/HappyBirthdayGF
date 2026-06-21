@@ -17,16 +17,21 @@
     </div>
 
     <script>
-  // اربط الزرار بالصوت
-  const enterBtn = document.querySelector('.click-to-enter-btn')  document.querySelector('button')  document.querySelector('a'); 
-  const audio = document.getElementById('bg-music');
+  document.addEventListener("DOMContentLoaded", function() {
+    // تحديد الزرار البينك بأي طريقة ممكنة في صفحتك
+    const enterBtn = document.querySelector('.click-to-enter-btn')  document.querySelector('button')  document.querySelector('.btn') || document.querySelector('a');
+    const audio = document.getElementById('bg-music');
 
-  if (enterBtn) {
-    enterBtn.addEventListener('click', function(e) {
-      // تشغيل الأغنية فوراً عند الضغط
-      audio.play().catch(err => console.log("Playback error:", err));
-    });
-  }
+    if (enterBtn) {
+      enterBtn.addEventListener('click', function() {
+        if (audio) {
+          audio.play().catch(function(err) {
+            console.log("Playback error:", err);
+          });
+        }
+      });
+    }
+  });
 </script>
         
 </body>
